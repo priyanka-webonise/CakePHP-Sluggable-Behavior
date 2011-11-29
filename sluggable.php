@@ -169,7 +169,7 @@ class SluggableBehavior extends ModelBehavior
 			'count',
 			array(
 				'conditions' => array(
-					$this->settings[$model->alias]['slug_field'] => $slug,
+					$model->alias . '.' . $this->settings[$model->alias]['slug_field'] => $slug,
 					$model->alias . '.id !=' => $model->id
 				)
 			)
